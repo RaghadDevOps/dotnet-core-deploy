@@ -3,11 +3,11 @@ pipeline {
     environment {
         AWS_ACCESS_KEY_ID = credentials('class-jenkins-aws-secret-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('class-jenkins-aws-secret-access-key')
-        AWS_S3_BUCKET = "jenkins.net"
+        AWS_S3_BUCKET = "jenkins-s3-dotnet"
         ARTIFACT_NAME = "hello-world.dll"
-        AWS_EB_APP_NAME = "jenkins.net"
+        AWS_EB_APP_NAME = "jenkins-app-dotnet"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Jenkinsnet-env"
+        AWS_EB_ENVIRONMENT = "Jenkinsappdotnet-env"
     }
     stages {
         stage('Restore') {
